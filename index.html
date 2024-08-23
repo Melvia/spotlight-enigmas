@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spotlight</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="spotlight"></div>
+<div class="content">
+    <h2>Spotlight using css & js</h2>
+    <p>
+        1.
+        У 28 человек 5 «Ы» класса на собрание пришли папы и мамы. Мам было - 24, пап - 18. У скольких учеников на
+        собрание пришли одновременно и папа и мама?
+        <br>
+        2.
+        Коле Гераскину - 12 лет, а профессору Селезнёву - 42. Через сколько лет Коля будет вдвое младше профессора?
+        <br>
+        3.
+        Ученик Вовочка любит решать математические задачи. Известно, что вчера он решил на 11 задач меньше, чем
+        позавчера и на 32 задачи меньше, чем позавчера и сегодня вместе. Сколько задач решил Вовочка сегодня?
+        <br>
+        4.
+        Делимое в 7 раз больше делителя, а делитель в 7 раз больше частного. Чему равны делимое, делитель и частное?
+        <br>
+
+        5.
+        В ящике лежат 100 синих, 100 красных, 100 зелёных и 100 фиолетовых карандашей. Сколько карандашей необходимо
+        достать, не заглядывая в ящик, чтобы среди них обязательно нашлись по крайней мере 1 красный и 1 фиолетовый.
+        <br>
+
+        6.
+        Во сколько раз секундная стрелка движется быстрее минутной?
+
+    </p>
+</div>
+<script>
+    let body = document.querySelector('body');
+    let spotlight = document.querySelector('.spotlight');
+    body.classList.add('active');
+
+    window.onmousemove = function(e) {
+        spotlight.style.top = e.clientY + 'px';
+        spotlight.style.left = e.clientX + 'px';
+    }
+
+    // ondblclick = when the user double clicks
+    body.ondblclick = function () {
+        spotlight.classList.toggle('active');
+    }
+
+</script>
+
+</body>
+</html>
